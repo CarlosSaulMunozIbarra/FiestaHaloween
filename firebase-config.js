@@ -1,10 +1,1 @@
-// Pega aqui la configuracion de tu app web de Firebase.
-export const firebaseConfig = {
-  apiKey: "AIzaSyDTzyyJ0b_KXPrNXSniK3W9elnuqmyXdfE",
-  authDomain: "fiestahaloween.firebaseapp.com",
-  projectId: "fiestahaloween",
-  storageBucket: "fiestahaloween.firebasestorage.app",
-  messagingSenderId: "1052147901549",
-  appId: "1:1052147901549:web:b9d7b19c3acef863ac8b64",
-  measurementId: "G-3RK7TYKD8J"
-};
+export const firebaseConfig={apiKey:"AIzaSyDTzyyJ0b_KXPrNXSniK3W9elnuqmyXdfE",authDomain:"fiestahaloween.firebaseapp.com",projectId:"fiestahaloween",storageBucket:"fiestahaloween.firebasestorage.app",messagingSenderId:"1052147901549",appId:"1:1052147901549:web:b9d7b19c3acef863ac8b64",measurementId:"G-3RK7TYKD8J"};
