@@ -1,13 +1,20 @@
-# Boletos QR - GitHub Pages
+# FiestaHaloween - boletos de un solo uso
 
-Sitio estatico para 70 boletos. La URL usa `?b=01` hasta `?b=70`.
+## Configuracion
+1. Crea un proyecto en Firebase Console.
+2. Agrega una aplicacion Web y copia sus datos en `firebase-config.js`.
+3. Activa Authentication > Sign-in method > Email/Password.
+4. Crea el usuario administrador en Authentication > Users.
+5. Copia su UID y reemplaza `REEMPLAZAR_UID_ADMIN` en `firestore.rules`.
+6. Crea Cloud Firestore en modo Production.
+7. En Firestore > Rules, pega `firestore.rules` y publica.
+8. Sube `index.html`, `firebase-config.js` y la carpeta `admin` a la raiz del repositorio `FiestaHaloween`.
 
-## Publicar
-1. Crea un repositorio en GitHub (por ejemplo `fiesta-boletos`).
-2. Sube `index.html` y `.nojekyll` a la rama `main`.
-3. Ve a **Settings > Pages**.
-4. En **Source**, elige **Deploy from a branch**.
-5. Selecciona `main` y `/ (root)`, y guarda.
-6. GitHub mostrara la URL publicada. Normalmente sera `https://USUARIO.github.io/fiesta-boletos/`.
+## Uso
+- El invitado abre `?b=01` y ve su boleto.
+- En la entrada, toca `Control de acceso` e inicia sesion.
+- Pulsa `MARCAR COMO UTILIZADO`.
+- La transaccion evita que el mismo boleto se marque válidamente dos veces.
 
-Ejemplo de boleto: `https://USUARIO.github.io/fiesta-boletos/?b=27`
+## Seguridad
+No uses reglas `allow read, write: if true`. Solo el UID administrador puede consultar o modificar el checklist.
